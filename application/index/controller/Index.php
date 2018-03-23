@@ -3,7 +3,8 @@
 namespace app\index\controller;
 
 use app\common\controller\Frontend;
-
+use think\Db;
+use think\Session;
 class Index extends Frontend
 {
 
@@ -12,18 +13,16 @@ class Index extends Frontend
     public function _initialize()
     {
         parent::_initialize();
+         if(!Session::get('userid')){
+            $this->redirect('index/user/login');
+        }
     }
 
     public function index()
     {
-
-        //$this->redirect('admin/index');
+        return $this->fetch(); 
     }
 
-    public function news()
-    {
-        $newslist = [];
-        return jsonp(['newslist' => $newslist, 'new' => count($newslist), 'url' => 'http://www.fastadmin.net?ref=news']);
-    }
+    
 
 }
