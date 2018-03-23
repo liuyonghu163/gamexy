@@ -1,0 +1,88 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label for="c-room_num" class="control-label col-xs-12 col-sm-2">{:__('Room_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-room_num" data-rule="required" class="form-control" name="row[room_num]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-name" class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" name="row[name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-type" class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type" data-rule="required" class="form-control" name="row[type]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-rule" class="control-label col-xs-12 col-sm-2">{:__('Rule')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-rule" data-rule="required" class="form-control" name="row[rule]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-seat" class="control-label col-xs-12 col-sm-2">{:__('Seat')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-seat" data-rule="required" class="form-control" name="row[seat]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-bet" class="control-label col-xs-12 col-sm-2">{:__('Bet')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-bet" data-rule="required" class="form-control" name="row[bet]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-join" class="control-label col-xs-12 col-sm-2">{:__('Join')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-join" data-rule="required" class="form-control" name="row[join]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-exit" class="control-label col-xs-12 col-sm-2">{:__('Exit')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-exit" data-rule="required" class="form-control" name="row[exit]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-circle" class="control-label col-xs-12 col-sm-2">{:__('Circle')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-circle" data-rule="required" class="form-control" name="row[circle]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-status" class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-create_user" class="control-label col-xs-12 col-sm-2">{:__('Create_user')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-create_user" data-rule="required" class="form-control" name="row[create_user]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-create_time" class="control-label col-xs-12 col-sm-2">{:__('Create_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-create_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[create_time]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-remark" class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remark" class="form-control" name="row[remark]" type="text">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

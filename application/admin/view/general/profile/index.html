@@ -1,0 +1,94 @@
+<style>
+    .profile-avatar-container {
+        position:relative;
+        width:100px;margin:0 auto;
+    }
+    .profile-avatar-container .profile-user-img{
+        width:100px;
+        height:100px;
+    }
+    .profile-avatar-container .profile-avatar-text {
+        display:none;
+    }
+    .profile-avatar-container:hover .profile-avatar-text {
+        display:block;
+        position:absolute;
+        height:100px;
+        width:100px;
+        background:#444;
+        opacity: .6;
+        color: #fff;
+        top:0;
+        left:0;
+        line-height: 100px;
+        text-align: center;
+    }
+    .profile-avatar-container button{
+        position:absolute;
+        top:0;left:0;width:100px;height:100px;opacity: 0;
+    }
+</style>
+<div class="row animated fadeInRight">
+    <div class="col-md-4">
+        <div class="box box-success">
+            <div class="panel-heading">
+                个人信息
+            </div>
+            <div class="panel-body">
+
+                <form id="update-form" role="form" data-toggle="validator" method="POST" action="{:url('general.profile/update')}">
+                    <input type="hidden" id="c-avatar" name="row[avatar]" value="{$admin.avatar}" />
+                    <div class="box-body box-profile">
+                        
+                        <div class="profile-avatar-container">
+                            <img class="profile-user-img img-responsive img-circle plupload" src="{$admin.avatar}" alt="">
+                            <div class="profile-avatar-text img-circle">{:__('Click to edit')}</div>
+                            <button id="plupload-avatar" class="plupload" data-input-id="c-avatar"><i class="fa fa-upload"></i> {:__('Upload')}</button>
+                        </div>
+                        
+                        <h3 class="profile-username text-center">{$admin.username}</h3>
+
+                        <p class="text-muted text-center">{$admin.email}</p>
+                        <div class="form-group">
+                            <label for="username" class="control-label">可兑换佣金:</label>
+                            <div class="external-event ui-draggable ui-draggable-handle" data-id="394" data-title="2222111" data-background="#18bc9c" style="background-color: rgb(24, 188, 156); color: rgb(255, 255, 255); position: relative;">{$totalnum}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="control-label">推广成员:</label>
+                            <div class="external-event ui-draggable ui-draggable-handle" data-id="391" data-title="fds" data-background="#3c8dbc" style="background-color: rgb(60, 141, 188); color: rgb(255, 255, 255); position: relative;">{$user_count}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nickname" class="control-label">元宝数:</label>
+                             <div class="external-event ui-draggable ui-draggable-handle" data-id="387" data-title="000000" data-background="#39cccc" style="background-color: rgb(57, 204, 204); color: rgb(255, 255, 255); position: relative;">{$userWallet.ingot}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="control-label">房卡数:</label>
+                            <div class="external-event ui-draggable ui-draggable-handle" data-id="348" data-title="hh" data-background="#0073b7" style="background-color: rgb(0, 115, 183); color: rgb(255, 255, 255); position: relative;">{$userWallet.roomcard}</div>
+                        </div>
+                    
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+   <div class="col-sm-4 col-md-3">
+        <!--下面四行是为了展示随机图片和标签，可移除-->
+        <div class="thumbnail example">
+            <span class="btn btn-warning">ID:{$userInfo.uselessid}</span>
+            <img src="{$codeurl[1]}" class="img-responsive" alt="登录">
+            <div class="caption">
+                <h4>推广二维码</h4>
+                <p>
+                    <!--详情的事件需要在JS中手动绑定-->
+                    <a href="{:url('user/myqrcode','id='.$userInfo['id'])}" class="btn btn-primary btn-success btn-detail btn-dialog" data-id="67059" title="我的二维码"><i class="fa fa-camera"></i> 我的二维码</a> 
+
+                    <!--如果需要响应编辑或删除事件，可以给元素添加 btn-edit或btn-del的类和data-id这个属性值-->
+                    <a href="{:url('user/extension','id='.$userInfo['id'])}" class="btn btn-primary btn-edit btn-dialog" data-id="67059" title="推广成员管理"><i class="fa fa-pencil"></i> 推广成员管理</a> 
+                    <a href="{:url('user/withdrawals','id='.$userInfo['id'])}" class="btn btn-danger btn-del btn-dialog" data-id="67059" title="提取佣金"><i class="fa fa-times"></i> 提取佣金</a>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

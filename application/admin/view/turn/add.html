@@ -1,0 +1,46 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label for="c-ingot" class="control-label col-xs-12 col-sm-2">{:__('Ingot')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ingot" data-rule="required" class="form-control" name="row[ingot]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-gold" class="control-label col-xs-12 col-sm-2">{:__('Gold')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-gold" data-rule="required" class="form-control" name="row[gold]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-roomcard" class="control-label col-xs-12 col-sm-2">{:__('Roomcard')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-roomcard" data-rule="required" class="form-control" name="row[roomcard]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-prob" class="control-label col-xs-12 col-sm-2">{:__('Prob')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-prob" data-rule="required" class="form-control" name="row[prob]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-msg" class="control-label col-xs-12 col-sm-2">{:__('Msg')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-msg" data-rule="required" class="form-control" name="row[msg]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-remark" class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remark" class="form-control" name="row[remark]" type="text">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

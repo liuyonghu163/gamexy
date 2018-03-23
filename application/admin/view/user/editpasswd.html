@@ -1,0 +1,76 @@
+<style>
+    .profile-avatar-container {
+        position:relative;
+        width:100px;margin:0 auto;
+    }
+    .profile-avatar-container .profile-user-img{
+        width:100px;
+        height:100px;
+    }
+    .profile-avatar-container .profile-avatar-text {
+        display:none;
+    }
+    .profile-avatar-container:hover .profile-avatar-text {
+        display:block;
+        position:absolute;
+        height:100px;
+        width:100px;
+        background:#444;
+        opacity: .6;
+        color: #fff;
+        top:0;
+        left:0;
+        line-height: 100px;
+        text-align: center;
+    }
+    .profile-avatar-container button{
+        position:absolute;
+        top:0;left:0;width:100px;height:100px;opacity: 0;
+    }
+</style>
+<div class="row animated fadeInRight">
+    <div class="col-md-4">
+        <div class="box box-success">
+            <div class="panel-heading">
+                {:__('修改密码')}
+            </div>
+            <div class="panel-body">
+
+                <form id="update-form" role="form" data-toggle="validator" method="POST" action="">
+                    <input type="hidden" id="c-avatar" name="row[avatar]" value="{$admin.avatar}" />
+                    <div class="box-body box-profile">
+                        
+                       
+                        
+                        <h3 class="profile-username text-center">{$admin.username}</h3>
+
+                        <p class="text-muted text-center">{$admin.email}</p>
+                        <div class="form-group">
+                            <label for="username" class="control-label">{:__('Username')}:</label>
+                            <input type="text" class="form-control" name="row[username]" value="{$admin.username}" disabled />
+                        </div>
+                        <div class="form-group">
+                            <label for="nickname" class="control-label">{:__('Nickname')}:</label>
+                            <input type="text" class="form-control" name="row[nickname]" value="{$admin.nickname}" data-rule="required" disabled />
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="control-label">{:__('Password')}:</label>
+                            <input type="password" class="form-control" placeholder="请重新输入密码" name="row[password]" data-rule="required" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label for="repassword" class="control-label">{:__('确定密码')}:</label>
+                            <input type="password" class="form-control" placeholder="请重新确定密码" name="row[repassword]" data-rule="required" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">{:__('Submit')}</button>
+                            <button type="reset" class="btn btn-default">{:__('Reset')}</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+   
+</div>

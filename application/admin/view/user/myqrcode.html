@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>后台管理</title>
+  </head>
+  <body>
+      <div id="content" style="width: 100%;height: 55rem;background: url(/assets/img/myQrcode.jpg) no-repeat left top; background-size: 100% 100%;position:relative">
+        <img style="border-radius: 50%;border:2px solid #fff;width: 4rem;height: 4rem;position:absolute;top: 20rem;left: 6rem;" src="{$userInfo.headimgurl}"> 
+        <div style="float: left;margin-top: 1.5rem;position:absolute;top: 18.5rem;left: 12rem;color: #fff;">
+          <p style="width: 11rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><strong>推荐人&nbsp;:&nbsp;</strong>{$userInfo.nickname}</p>
+          <p><strong>推荐码&nbsp;:&nbsp;</strong>{$userInfo.uselessid}</p>
+        </div>
+        <img style="border-radius: 1rem;width: 11rem;height: 11rem;position:absolute;top: 25.7rem;left: 10.5rem;" src="{$codeurl[1]}">
+    </div> 
+  </body>
+
+</html>

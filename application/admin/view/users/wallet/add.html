@@ -1,0 +1,84 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label for="c-uid" class="control-label col-xs-12 col-sm-2">{:__('Uid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-uid" data-rule="required" class="form-control" name="row[uid]" type="number">
+        </div>
+    </div>
+                    edit_url: 'users/wallet/edit',
+                    //del_url: 'users/wallet/del',
+    <div class="form-group">
+        <label for="c-ingot" class="control-label col-xs-12 col-sm-2">{:__('Ingot')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ingot" data-rule="required" class="form-control" name="row[ingot]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-ingot_change" class="control-label col-xs-12 col-sm-2">{:__('Ingot_change')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ingot_change" data-rule="required" class="form-control" name="row[ingot_change]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-gold" class="control-label col-xs-12 col-sm-2">{:__('Gold')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-gold" data-rule="required" class="form-control" name="row[gold]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-gold_change" class="control-label col-xs-12 col-sm-2">{:__('Gold_change')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-gold_change" data-rule="required" class="form-control" name="row[gold_change]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-roomcard" class="control-label col-xs-12 col-sm-2">{:__('Roomcard')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-roomcard" data-rule="required" class="form-control" name="row[roomcard]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-roomcard_change" class="control-label col-xs-12 col-sm-2">{:__('Roomcard_change')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-roomcard_change" data-rule="required" class="form-control" name="row[roomcard_change]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-source" class="control-label col-xs-12 col-sm-2">{:__('Source')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-source" data-rule="required" class="form-control" name="row[source]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-type" class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type" data-rule="required" class="form-control" name="row[type]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-ctime" class="control-label col-xs-12 col-sm-2">{:__('Ctime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ctime" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[ctime]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-info" class="control-label col-xs-12 col-sm-2">{:__('Info')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-info" data-rule="required" class="form-control" name="row[info]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-remark" class="control-label col-xs-12 col-sm-2">{:__('Remark')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-remark" class="form-control" name="row[remark]" type="text">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
